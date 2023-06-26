@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- script que permite utilizar o build-table da pasta js (igual um import no java) -->
+    <script src="../js/build-table.js"></script> 
+    <script>
+        // mesmo array do estudo v1
+        var usuarios = [
+            // declaração dos atributos dos usuarios
+            {id:1, nome:"Pedro", usuario:"pedro", email:"pedro@curso.com.br"},
+            {id:2, nome:"Tiago", usuario:"tiago", email:"tiago@curso.com.br"},
+            {id:3, nome:"João", usuario:"joao", email:"joao@curso.com.br"},
+            {id:4, nome:"André", usuario:"andre", email:"andre@curso.com.br"},
+            {id:5, nome:"Filipe", usuario:"filipe", email:"filipe@curso.com.br"},
+            {id:6, nome:"Judas Iscariotes", usuario:"iscariotes", email:"iscariotes@curso.com.br"},
+            {id:7, nome:"Mateus", usuario:"mateus", email:"mateus@curso.com.br"},
+            {id:8, nome:"Tomé", usuario:"tome", email:"tome@curso.com.br"},
+            {id:9, nome:"Tiago de Alfeu", usuario:"alfeu", email:"alfeu@curso.com.br"},
+            {id:10, nome:"Bartolomeu", usuario:"bartolomeu", email:"bartolomeu@curso.com.br"},
+            {id:11, nome:"Judas Tadeu", usuario:"tadeu", email:"tadeu@curso.com.br"},
+            {id:12, nome:"Simão Zelote", usuario:"zelote", email:"zelote@curso.com.br"}
+        ];
+
+        // função que cria a tabela
+        function criarTabela(){
+            let table = document.querySelector("table"); //usa a table que foi criada no body
+            let data = Object.keys(usuarios[0]); //usa os atributos dos usuarios
+            generateTableHead(table, data); //pega a função do cabeçalho da pasta js
+            generateTable(table, usuarios); //pega a função da lista da pasta js
+        }
+    </script>
+</head>
+<!-- quando carrega a página ele executa a função criar tabela -->
+<body onload="criarTabela();">
+    <!-- cria a tag table que será usada na função criar tabela (onde ficará a tabela no site) -->
+    <table></table>
+</body>
+</html>

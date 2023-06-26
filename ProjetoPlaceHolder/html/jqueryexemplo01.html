@@ -1,0 +1,27 @@
+<!-- $(" ") = seletor / $("# ") = seletor com id especifico -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript">
+        // quando a pagina carregar executa os scripts (document.ready)
+        // programa uma função personalizada
+        $(function(){
+            $("#btnExibir").click(function(){
+                $("#hMensagem").text("UAUUUUUUUU 'o'");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button id="btnExibir">clique para ver a mágica</button>
+        <br>
+        <h1 id="hMensagem"></h1>
+    </div>
+</body>
+</html>

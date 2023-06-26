@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#btnTroca1").click(function(){
+                $("#p1").css("background-color", "red");
+                $("#p2").css("background-color", "white");
+                $("#p3").css("background-color", "white");
+            });
+
+            $("#btnTroca2").click(function(){
+                $("#p1").css("background-color", "white");
+                $("#p2").css("background-color", "cyan");
+                $("#p3").css("background-color", "white");
+            });
+
+            $("#btnTroca3").click(function(){
+                $("#p1").css("background-color", "white");
+                $("#p2").css("background-color", "white");
+                $("#p3").css("background-color", "purple");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <button id="btnTroca1">Mostrar a cor Giga Chad.</button>
+        <p id="p1">Cor giga chad.</p>
+    </div>
+    <div>
+        <button id="btnTroca2">Mostrar a cor dos betas.</button>
+        <p id="p2">Cor beta.</p>
+    </div>
+    <div>
+        <button id="btnTroca3">Mostrar a cor Sigma.</button>
+        <p id="p3">Cor sigma.</p>
+    </div>
+</body>
+</html>
